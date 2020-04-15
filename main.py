@@ -14,7 +14,6 @@ cell_num = 15   # 每行每列可以下的点数
 grid_size = cell_size * (cell_num - 1) + space * 2 # 棋盘大小
 screencaption = pygame.display.set_caption('FIR')
 screen = pygame.display.set_mode((grid_size,grid_size)) # 设置窗口大小
-img = pygame.image.load('game_over.jpg')
 
 def chess_win(xi,yi,chess_arr):
     mark = False
@@ -145,8 +144,4 @@ while True:
     if over:
         break
     pygame.display.update() 
-
-screen.blit(img,(0,0))
-pygame.display.update() 
-time.sleep(10)
 
